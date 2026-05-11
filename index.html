@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amos Horne">
+    <title>Bear Ninja Hunter</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #player-choice-display {
+            color: green;
+        }
+
+        #computer-choice-display {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bear Ninja Hunter</h1>
+
+    <p id="player-choice-display">Waiting for player...</p>
+    <p id="computer-choice-display">Waiting for computer...</p>
+
+    <script>
+        let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
+
+        alert('Hi ' + playerName + ' Let\'s play!');
+
+        let playerChoice = prompt('Who are you: Bear, Ninja, or Hunter? ');
+
+        const computerChoice = 'Bear';
+
+        let playerResult = `${playerName} chose ${playerChoice}`;
+        let computerResult = 'The computer chose ' + computerChoice;
+
+        document.getElementById('player-choice-display').innerHTML = playerResult;
+        document.getElementById('computer-choice-display').innerHTML = computerResult;
+
+        console.log(playerResult);
+        console.log(computerResult);
+        console.log(`${playerName} vs. the computer — game logic coming in the next assignment!`);
+    </script>
+
+</body>
+</html>
